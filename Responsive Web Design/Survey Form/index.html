@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <link rel='stylesheet' href='styles.css'>
+  <title>Survey Form</title>
+</head>
+<body>
+  <h1 id='title'>Survey Form</h1>
+  <p id='description'>Thank you for taking the time to help us improve the platform</p>
+  <form id='survey-form'>
+
+    <div class='form-control'>
+    <label for='name' id='name-label'>Name <input id='name' type='text' required placeholder='Enter your name'></label>
+    </div>
+
+    <div class='form-control'>
+    <label for='email' id='email-label'>Email <input id='email' type='email' required placeholder='Enter your Email'></label>
+    </div>
+
+    <div class="form-control">
+        <label for='age' id='number-label'>Age: <input id='age' type='number' min='12', max='121' placeholder='Age'></label>
+    </div>
+
+    <div class="form-control">
+        <label for='dropdown'>Choose an option:</label>
+        <select id='dropdown'>
+            <option value='A'>A</option>
+            <option value='B'>B</option>
+            <option value='C'>C</option>
+          </select>
+    </div>
+
+    <div class="form-control">
+        <input type='radio' id='yes' name='Y/N' value='yes'>
+        <label for='yes'>Yes</label>
+        <input type='radio' id='no' name='Y/N' value='no'>
+        <label for='no'>No</label>
+    </div>
+
+    <div class="form_control">
+        <input type='checkbox' id='choice1' name='choice1' value='choice1'>
+        <label for='choice1'>Choice 1</label>
+        <input type='checkbox' id='choice2' name='choice2' value='choice2'>
+        <label for='choice2'>Choice 2</label>
+        <input type='checkbox' id='choice3' name='choice3' value='choice3'>
+        <label for='choice3'>Choice 3</label>
+    </div>
+
+    <div class="form_control">
+        <label for='info'>Additional feedback:</label>
+        <textarea id='info' name='info' rows='4' cols='50'></textarea>
+    </div>
+
+    <button type="submit" value="submit">
+        Submit
+    </button>
+  </form>
+</body>
+
+</html>
