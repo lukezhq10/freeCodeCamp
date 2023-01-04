@@ -1,3 +1,5 @@
+** start of undefined **
+
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -47,3 +49,33 @@
 </body>
 
 </html>
+
+** end of undefined **
+
+** start of undefined **
+
+h1. p {
+    text-align: center;
+}
+
+body {
+    background-image: url('https://wallpaperaccess.com/full/805624.jpg');
+    background-size: cover;
+    font-size: 200%;
+    text-align: center;
+    color: white;
+}
+
+.form-control {
+    text-align: left;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+input::placeholder {
+    color: rgba(39, 111, 145, 0.658);
+}
+
+
+** end of undefined **
+
