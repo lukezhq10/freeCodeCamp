@@ -3,7 +3,7 @@ PSQL="psql --username=freecodecamp --dbname=number_guess -t --no-align -c"
 
 MAIN_MENU() {
   #take username as input
-  echo -e "Enter your username:"
+  echo "Enter your username:"
   read USERNAME
 
   #get username from database
@@ -32,7 +32,7 @@ GAME() {
   NUM=$(( $RANDOM % 1000 + 1))
 
   #read user input
-  echo -e "Guess the secret number between 1 and 1000:"
+  echo "Guess the secret number between 1 and 1000:"
 
   #track num guesses
   TRIES=0
@@ -46,13 +46,13 @@ GAME() {
     # if not integer
     if [[ ! $GUESS =~ ^[0-9]+$ ]];
     then
-      echo -e "That is not an integer, guess again:"
+      echo "That is not an integer, guess again:"
 
     # if correct guess
     elif [[ $GUESS -eq $NUM ]];
     then
       TRIES=$(($TRIES + 1))
-      echo -e "You guessed it in $TRIES tries. The secret number was $NUM. Nice job!"
+      echo "You guessed it in $TRIES tries. The secret number was $NUM. Nice job!"
       USER_ID=$($PSQL "SELECT user_id FROM users WHERE username='$USERNAME'")
       GAMES_RESULT=$($PSQL "INSERT INTO games(user_id, guesses) VALUES('$USER_ID','$TRIES')")
       GUESSED=1
@@ -61,12 +61,12 @@ GAME() {
     elif [[ $GUESS -gt $NUM ]];
     then
       TRIES=$(($TRIES + 1))
-      echo -e "It's lower than that, guess again:"
+      echo "It's lower than that, guess again:"
     
     #if guess < num
     else
       TRIES=$(($TRIES + 1))
-      echo -e "It's higher than that, guess again:"
+      echo "It's higher than that, guess again:"
     fi
   done
   
